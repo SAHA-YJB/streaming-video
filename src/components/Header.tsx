@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Header = () => {
   return (
     <header className='w-full px-[170px] py-12 bg-black bg-opacity-60 justify-center items-center gap-10 inline-flex'>
