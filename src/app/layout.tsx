@@ -17,10 +17,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang='ko'>
-      <body className={`${inter.className} relative`}>
+      <body className={`${inter.className}`}>
         <Header />
-
-        <div className='h-[1900px]'></div>
         {children}
       </body>
     </html>
