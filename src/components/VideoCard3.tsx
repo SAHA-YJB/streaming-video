@@ -8,7 +8,7 @@ function VideoCard() {
   const playerRef = useRef<any>(null);
 
   useEffect(() => {
-    const socket = new WebSocket('ws://localhost:9999');
+    const socket = new WebSocket('ws://localhost:9997');
 
     playerRef.current = new jsmpeg(socket, {
       canvas: canvasRef.current,
@@ -26,7 +26,7 @@ function VideoCard() {
         className='w-[400px] h-[300px] shadow-md rounded-sm'
       />
       <span className='display-[inline-block] mt-3 font-semibold text-lg'>
-        CAMERA 1
+        CAMERA 3
       </span>
     </div>
   );
