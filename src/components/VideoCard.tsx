@@ -1,11 +1,10 @@
 'use client';
-import Image from 'next/image';
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 const jsmpeg = require('jsmpeg');
 
 function VideoCard() {
-  const canvasRef = useRef<any>(null);
-  const playerRef = useRef<any>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const playerRef = useRef(null);
 
   useEffect(() => {
     const socket = new WebSocket('ws://localhost:9999');
