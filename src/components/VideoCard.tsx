@@ -3,12 +3,17 @@ import { useEffect, useRef } from 'react';
 
 const jsmpeg = require('jsmpeg');
 
-function VideoCard() {
+interface VideoCardProps {
+  url: string;
+  cameraName: string;
+}
+
+function VideoCard({ url, cameraName }: VideoCardProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const playerRef = useRef<any>(null);
 
   useEffect(() => {
-    const socket = new WebSocket('ws://localhost:9999');
+    const socket = new WebSocket(url);
 
     playerRef.current = new jsmpeg(socket, {
       canvas: canvasRef.current,
@@ -17,7 +22,7 @@ function VideoCard() {
     return () => {
       socket.close();
     };
-  }, []);
+  }, [url]);
 
   return (
     <div className='text-center flex flex-col'>
@@ -26,7 +31,7 @@ function VideoCard() {
         className='w-[400px] h-[300px] shadow-md rounded-sm'
       />
       <span className='display-[inline-block] mt-3 font-semibold text-lg'>
-        CAMERA 1
+        {cameraName}
       </span>
     </div>
   );
