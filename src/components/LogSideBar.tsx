@@ -21,10 +21,13 @@ const LogSideBar = () => {
         {cards.map((_, i) => (
           <div
             key={i}
-            className='w-[150px] h-[150px] my-10 bg-slate-500 rounded-md shadow-md flex items-center justify-center text-white text-xl'
+            className='w-[180px] h-[150px] my-10 rounded-md shadow-lg border flex items-center justify-center text-white text-xl'
           >
             {data.slice(start + i, start + i + 1).map((item, i) => (
-              <div key={i} className='text-center flex flex-col'>
+              <div
+                key={i}
+                className='text-center flex flex-col justify-center items-center'
+              >
                 <p>{item.detections}</p>
                 <p>{item.processingTime}</p>
               </div>
