@@ -5,12 +5,13 @@ import React, { useEffect, useState } from 'react';
 const LogSideBar = () => {
   const cards = Array(3).fill(0);
   const data = logData(text);
-  const [start, setStart] = useState(0); // 시작 인덱스를 상태로 관리
+  console.log(data);
+  const [start, setStart] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setStart((prevStart) => (prevStart + 3) % data.length);
-    }, 3000);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, [data]);
