@@ -29,7 +29,7 @@ video 1/1 (1521/10386) /home/dskim/yolov7-segmentation/12.mp4: 384x640 1 fire, 1
 const logData = (text: string) => {
   const lines = text.split('\n');
 
-  const data = lines.map((line, index) => {
+  return lines.map((line, index) => {
     const parts = line.split(',');
 
     let detections;
@@ -47,8 +47,6 @@ const logData = (text: string) => {
       processingTime,
     };
   });
-
-  console.log(JSON.stringify(data, null, 2));
 };
 
 export default logData;

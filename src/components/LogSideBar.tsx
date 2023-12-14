@@ -1,9 +1,19 @@
+'use client';
 import logData, { text } from '@/logData/data';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const LogSideBar = () => {
   const cards = Array(3).fill(0);
   const data = logData(text);
+  const [start, setStart] = useState(0); // 시작 인덱스를 상태로 관리
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setStart((prevStart) => (prevStart + 3) % data.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [data]);
 
   return (
     <div className='flex items-center justify-center p-4 bg-slate-800 h-auto sm:h-[100vh] ml-4'>
@@ -13,7 +23,12 @@ const LogSideBar = () => {
             key={i}
             className='w-[150px] h-[150px] my-10 bg-slate-500 rounded-md shadow-md flex items-center justify-center text-white text-xl'
           >
-            Log {i + 1}
+            {data.slice(start + i, start + i + 1).map((item, i) => (
+              <div key={i} className='text-center flex flex-col'>
+                <p>{item.detections}</p>
+                <p>{item.processingTime}</p>
+              </div>
+            ))}
           </div>
         ))}
       </div>
