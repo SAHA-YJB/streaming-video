@@ -7,15 +7,15 @@ const camara3 = process.env.NEXT_PUBLIC_CAMARA3!;
 
 export default function Home() {
   return (
-    <div className='flex sm:flex-row flex-col justify-center items-center w-full h-auto'>
+    <div className='flex sm:flex-col md:flex-row flex-col justify-center items-center w-full h-auto'>
       <div className='flex flex-col justify-between flex-grow'>
-        <div className='flex flex-row justify-between'>
+        <div className='flex flex-col lg:flex-row justify-between'>
           {/* 위 */}
           <VideoCard url={camara1} cameraName='CAMERA 1' />
           <VideoCard url={camara2} cameraName='CAMERA 2' />
           <VideoCard url={camara3} cameraName='CAMERA 3' />
         </div>
-        <div className='flex flex-row justify-between'>
+        <div className='flex flex-col lg:flex-row justify-between'>
           {/* 아래 */}
           <VideoCard url={camara1} cameraName='CAMERA 1' />
           <VideoCard url={camara2} cameraName='CAMERA 2' />

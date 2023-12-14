@@ -4,7 +4,7 @@
 
 body {
   @apply bg-slate-400;
-  background-image: url('/kmcp.png');
+  /* background-image: url('/kmcp.png');
   background-size: cover;
-  background-position: center;
+  background-position: center; */
 }
