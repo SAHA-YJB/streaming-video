@@ -5,7 +5,6 @@ import React, { useEffect, useState } from 'react';
 const LogSideBar = () => {
   const cards = Array(3).fill(0);
   const data = logData(text);
-  console.log(data);
   const [start, setStart] = useState(0);
 
   useEffect(() => {
@@ -17,7 +16,7 @@ const LogSideBar = () => {
   }, [data]);
 
   return (
-    <div className='flex items-center justify-center p-4 bg-slate-800 h-auto sm:h-[100vh] ml-4'>
+    <div className='flex items-center justify-center p-4 h-auto sm:h-[100vh] ml-4'>
       <div className='overflow-y-auto h-full w-full flex flex-row space-x-4 sm:flex-col items-center justify-center'>
         {cards.map((_, i) => (
           <div

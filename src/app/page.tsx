@@ -13,13 +13,13 @@ export default function Home() {
           {/* 위 */}
           <VideoCard url={camara1} cameraName='CAMERA 1' />
           <VideoCard url={camara2} cameraName='CAMERA 2' />
-          <VideoCard url={camara3} cameraName='CAMERA 3' />
+          <VideoCard url={camara3} cameraName='Hanwha CAM' />
         </div>
         <div className='flex flex-col lg:flex-row justify-between'>
           {/* 아래 */}
           <VideoCard url={camara1} cameraName='CAMERA 1' />
           <VideoCard url={camara2} cameraName='CAMERA 2' />
-          <VideoCard url={camara3} cameraName='CAMERA 3' />
+          <VideoCard url={camara3} cameraName='Hanwha CAM' />
         </div>
       </div>
       {/* 오른쪽 */}
