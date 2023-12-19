@@ -17,9 +17,9 @@ export default function Home() {
         </div>
         <div className='flex flex-col lg:flex-row justify-between'>
           {/* 아래 */}
-          <VideoCard url={camara1} cameraName='CAMERA 1' />
+          {/* <VideoCard url={camara1} cameraName='CAMERA 1' />
           <VideoCard url={camara2} cameraName='CAMERA 2' />
-          <VideoCard url={camara3} cameraName='Hanwha CAM' />
+          <VideoCard url={camara3} cameraName='Hanwha CAM' /> */}
         </div>
       </div>
       {/* 오른쪽 */}
