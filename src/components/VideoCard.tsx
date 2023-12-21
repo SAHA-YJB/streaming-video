@@ -35,7 +35,7 @@ function VideoCard({ url, cameraName }: VideoCardProps) {
     <div className='text-center md:justify-center md:items-center flex flex-col mt-6 ml-4'>
       <canvas
         ref={canvasRef}
-        className='w-[350px] h-[300px] shadow-md rounded-sm'
+        className='w-[350px] h-[300px] shadow-md rounded-sm object-cover'
       />
       <span className='display-[inline-block] mt-3 font-semibold text-lg text-slate-200'>
         {cameraName}
