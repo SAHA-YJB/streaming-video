@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  background-color: #000000;
+  background-color: #fff;
   background-image: url('/kmcpTextLogoWhite.png');
   background-size: 50%;
   background-repeat: no-repeat;

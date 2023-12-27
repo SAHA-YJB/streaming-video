@@ -9,13 +9,13 @@ export default function Home() {
   return (
     <div className='flex sm:flex-col md:flex-row flex-col justify-center items-center w-full h-auto'>
       <div className='flex flex-col justify-between flex-grow'>
-        <div className='flex flex-col lg:flex-row justify-between'>
+        <div className='flex flex-col lg:flex-row justify-between lg:mx-6 xl:mx-8'>
           {/* 위 */}
           <VideoCard url={camara1} cameraName='CAMERA 1' />
           <VideoCard url={camara2} cameraName='CAMERA 2' />
           <VideoCard url={camara3} cameraName='Hanwha CAM' />
         </div>
-        <div className='flex flex-col lg:flex-row justify-between'>
+        <div className='flex flex-col lg:flex-row justify-between lg:mx-6 xl:mx-8'>
           {/* 아래 */}
           {/* <VideoCard url={camara1} cameraName='CAMERA 1' />
           <VideoCard url={camara2} cameraName='CAMERA 2' />
